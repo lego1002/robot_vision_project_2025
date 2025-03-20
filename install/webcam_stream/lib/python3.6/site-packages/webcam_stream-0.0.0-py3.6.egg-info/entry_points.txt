@@ -1,0 +1,3 @@
+[console_scripts]
+camera_node = webcam_stream.camera_node:main
+

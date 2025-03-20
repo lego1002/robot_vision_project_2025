@@ -1,0 +1,3 @@
+[console_scripts]
+camera_subscriber = my_camera_pkg.scripts.camera_subscriber:main
+

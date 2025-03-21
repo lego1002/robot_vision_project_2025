@@ -1,3 +1,4 @@
 import sys
-sys.real_prefix = sys.prefix
-sys.prefix = sys.exec_prefix = '/ros_ws/install/webcam_stream'
+if sys.prefix == '/usr':
+    sys.real_prefix = sys.prefix
+    sys.prefix = sys.exec_prefix = '/home/jacky/Documents/robot_vision_project_2025/install/webcam_stream'

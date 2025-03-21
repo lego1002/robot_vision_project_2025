@@ -1,6 +1,0 @@
-Invoking command in '/ros_ws/build/rplidar_ros': /usr/local/bin/cmake /ros_ws/src/rplidar_ros-ros2 -DCMAKE_INSTALL_PREFIX=/ros_ws/install/rplidar_ros
-Invoked command in '/ros_ws/build/rplidar_ros' returned '0': /usr/local/bin/cmake /ros_ws/src/rplidar_ros-ros2 -DCMAKE_INSTALL_PREFIX=/ros_ws/install/rplidar_ros
-Invoking command in '/ros_ws/build/rplidar_ros': /usr/local/bin/cmake --build /ros_ws/build/rplidar_ros -- -j4 -l4
-Invoked command in '/ros_ws/build/rplidar_ros' returned '0': /usr/local/bin/cmake --build /ros_ws/build/rplidar_ros -- -j4 -l4
-Invoking command in '/ros_ws/build/rplidar_ros': /usr/local/bin/cmake --install /ros_ws/build/rplidar_ros
-Invoked command in '/ros_ws/build/rplidar_ros' returned '0': /usr/local/bin/cmake --install /ros_ws/build/rplidar_ros

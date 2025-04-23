@@ -1,5 +1,6 @@
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3_launch.py
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_c1_launch.py
+/home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_slam_launch.py
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m7_launch.py
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp_launch.py
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a1_launch.py
@@ -12,6 +13,7 @@
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2_launch.py
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s3_launch.py
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_launch.py
+/home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_slam_with_tf_launch.py
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a1_launch.py
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2e_launch.py
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m12_launch.py
@@ -23,6 +25,7 @@
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m12_launch.py
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp_launch.py
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/rviz/rplidar_ros.rviz
+/home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/rviz/rplidar_ros_backup.rviz
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/lib/rplidar_ros/rplidar_node
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
 /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/lib/rplidar_ros/rplidar_client

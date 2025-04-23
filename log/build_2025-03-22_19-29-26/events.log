@@ -1,0 +1,5 @@
+[0.000000] (-) TimerEvent: {}
+[0.000187] (-) JobUnselected: {'identifier': 'my_camera_pkg'}
+[0.000225] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.000237] (-) JobUnselected: {'identifier': 'webcam_stream'}
+[0.000330] (-) EventReactorShutdown: {}

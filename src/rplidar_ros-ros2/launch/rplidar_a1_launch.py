@@ -52,7 +52,7 @@ def generate_launch_description():
             description='Specifying whether or not to enable angle_compensate of scan data'),
         DeclareLaunchArgument(
             'scan_mode',
-            default_value='Standard',
+            default_value=scan_mode,
             description='Specifying scan mode of lidar'),
 
 
@@ -66,7 +66,7 @@ def generate_launch_description():
                          'frame_id': frame_id,
                          'inverted': inverted,
                          'angle_compensate': angle_compensate,
-                         'scan_mode': 'Standard'}],
+                         'scan_mode': scan_mode}],
             output='screen'),
     ])
 

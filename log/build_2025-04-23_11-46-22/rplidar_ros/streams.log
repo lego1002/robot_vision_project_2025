@@ -1,0 +1,58 @@
+[0.006s] Invoking command in '/home/jacky/Documents/robot_vision_project_2025/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacky/Documents/robot_vision_project_2025/install/webcam_stream:/home/jacky/Documents/robot_vision_project_2025/install/my_camera_pkg:/opt/ros/humble /usr/bin/cmake --build /home/jacky/Documents/robot_vision_project_2025/build/rplidar_ros -- -j16 -l16
+[0.038s] [  5%] Built target rplidar_client
+[0.043s] [100%] Built target rplidar_composition
+[0.043s] [100%] Built target rplidar_node
+[0.050s] Invoked command in '/home/jacky/Documents/robot_vision_project_2025/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacky/Documents/robot_vision_project_2025/install/webcam_stream:/home/jacky/Documents/robot_vision_project_2025/install/my_camera_pkg:/opt/ros/humble /usr/bin/cmake --build /home/jacky/Documents/robot_vision_project_2025/build/rplidar_ros -- -j16 -l16
+[0.055s] Invoking command in '/home/jacky/Documents/robot_vision_project_2025/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacky/Documents/robot_vision_project_2025/install/webcam_stream:/home/jacky/Documents/robot_vision_project_2025/install/my_camera_pkg:/opt/ros/humble /usr/bin/cmake --install /home/jacky/Documents/robot_vision_project_2025/build/rplidar_ros
+[0.059s] -- Install configuration: ""
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3_launch.py
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_c1_launch.py
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_slam_launch.py
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m7_launch.py
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp_launch.py
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a1_launch.py
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3_launch.py
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_t1_launch.py
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s3_launch.py
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m8_launch.py
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2e_launch.py
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_launch.py
+[0.059s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s3_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_slam_with_tf_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a1_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2e_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m12_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_t1_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m7_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_c1_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m8_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m12_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp_launch.py
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/rviz
+[0.060s] -- Installing: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/rviz/rplidar_ros.rviz
+[0.060s] -- Installing: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/rviz/rplidar_ros_backup.rviz
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/lib/rplidar_ros/rplidar_node
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/lib/rplidar_ros/rplidar_client
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/environment/path.sh
+[0.060s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/environment/path.dsv
+[0.061s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/local_setup.bash
+[0.061s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/local_setup.sh
+[0.061s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/local_setup.zsh
+[0.061s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/local_setup.dsv
+[0.061s] -- Installing: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/package.dsv
+[0.061s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros
+[0.061s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.061s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.061s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake
+[0.061s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake
+[0.061s] -- Up-to-date: /home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros/share/rplidar_ros/package.xml
+[0.061s] Invoked command in '/home/jacky/Documents/robot_vision_project_2025/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacky/Documents/robot_vision_project_2025/install/webcam_stream:/home/jacky/Documents/robot_vision_project_2025/install/my_camera_pkg:/opt/ros/humble /usr/bin/cmake --install /home/jacky/Documents/robot_vision_project_2025/build/rplidar_ros

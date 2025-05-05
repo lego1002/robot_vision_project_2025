@@ -1,1 +1,5 @@
+ahrs
+numpy
+rich
+setuptools
 setuptools

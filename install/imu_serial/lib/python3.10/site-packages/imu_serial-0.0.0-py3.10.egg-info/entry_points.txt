@@ -1,3 +1,4 @@
 [console_scripts]
 imu_serial_node = imu_serial.imu_serial_node:main
+imu_velocity_node = imu_serial.imu_velocity_node:main
 

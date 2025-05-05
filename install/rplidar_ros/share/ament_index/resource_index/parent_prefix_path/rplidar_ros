@@ -1,1 +1,1 @@
-/home/jacky/Documents/robot_vision_project_2025/install/webcam_stream:/home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros:/home/jacky/Documents/robot_vision_project_2025/install/my_camera_pkg:/opt/ros/humble
+/home/jacky/Documents/robot_vision_project_2025/install/webcam_stream:/home/jacky/Documents/robot_vision_project_2025/install/rplidar_ros:/home/jacky/Documents/robot_vision_project_2025/install/my_camera_pkg:/home/jacky/Documents/robot_vision_project_2025/install/imu_serial:/home/jacky/Documents/robot_vision_project_2025/install/imu:/opt/ros/humble

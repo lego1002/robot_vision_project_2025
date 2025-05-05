@@ -8,9 +8,13 @@ setup.py
 ../../build/imu_serial/imu_serial.egg-info/requires.txt
 ../../build/imu_serial/imu_serial.egg-info/top_level.txt
 ../../build/imu_serial/imu_serial.egg-info/zip-safe
+config/imu_ekf.yaml
 imu_serial/__init__.py
 imu_serial/imu_serial_node.py
+imu_serial/imu_velocity_node.py
+launch/imu_ekf_launch.py
 resource/imu_serial
+rviz/imu_ekf.rviz
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py

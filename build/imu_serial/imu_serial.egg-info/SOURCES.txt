@@ -10,8 +10,8 @@ setup.py
 ../../build/imu_serial/imu_serial.egg-info/zip-safe
 config/imu_ekf.yaml
 imu_serial/__init__.py
-imu_serial/imu_serial_node.py
-imu_serial/imu_velocity_node.py
+imu_serial/imu_based_odom.py
+imu_serial/imu_data.py
 launch/imu_ekf_launch.py
 resource/imu_serial
 rviz/imu_ekf.rviz

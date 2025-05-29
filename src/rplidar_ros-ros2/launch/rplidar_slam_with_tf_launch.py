@@ -54,12 +54,12 @@ def generate_launch_description():
         ),
         
         # 靜態 TF： -> base_link
-        Node(
-            package='tf2_ros',
-            executable='static_transform_publisher',
-            name='odom_tf_pub',
-            arguments=['0', '0', '0', '0', '0', '0', 'odom', 'base_link'],
-        ),
+        # Node(
+        #     package='tf2_ros',
+        #     executable='static_transform_publisher',
+        #     name='odom_tf_pub',
+        #     arguments=['0', '0', '0', '0', '0', '0', 'odom', 'base_link'],
+        # ),
 
         # SLAM Toolbox 節點（同步模式）
         Node(
@@ -72,7 +72,9 @@ def generate_launch_description():
                 'odom_frame': 'odom',
                 'map_frame': 'map',
                 'base_frame': 'base_link',
-                'scan_topic': 'scan'
+                'scan_topic': 'scan',
+                'use_scan_matching': True,
+                #'wait_for_transform': True
             }]
         ),
 

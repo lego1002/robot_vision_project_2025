@@ -28,17 +28,17 @@ def generate_launch_description():
         # 啟動node: IMU加速度讀取
         Node(
             package='imu_serial',
-            executable='imu_serial_node',
-            name='imu_serial_node',
+            executable='imu_data',
+            name='imu_data',
             output='screen'
         ),
         
-        # 啟動node: IMU速度估算
+        # 啟動node: IMU速度位置估算
         Node(
             package='imu_serial',
-            executable='imu_velocity_node',
-            name='imu_velocity_node',
-            output='screen'
+            executable='imu_based_odom',
+            name='imu_based_odom',
+            output='screen',
         ),
 
         # 啟動node: 內建EKF 

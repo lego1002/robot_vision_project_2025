@@ -8,6 +8,7 @@ Panels:
         - /Status1
         - /Filtered Odometry1
         - /TF1
+        - /TF1/Frames1
         - /Imu1
         - /Imu1/Axes properties1
       Splitter Ratio: 0.5
@@ -65,7 +66,7 @@ Visualization Manager:
       Frames:
         All Enabled: false
         base_link:
-          Value: false
+          Value: true
         imu_link:
           Value: true
         odom:
@@ -76,11 +77,10 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        base_link:
-          imu_link:
-            {}
         odom:
-          {}
+          base_link:
+            imu_link:
+              {}
       Update Interval: 0
       Value: true
     - Acceleration properties:

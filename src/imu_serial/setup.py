@@ -31,8 +31,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'imu_serial_node = imu_serial.imu_serial_node:main',
-            'imu_velocity_node = imu_serial.imu_velocity_node:main',
+            'imu_data = imu_serial.imu_data:main',
+            'imu_based_odom = imu_serial.imu_based_odom:main',
         ],
     },
 )

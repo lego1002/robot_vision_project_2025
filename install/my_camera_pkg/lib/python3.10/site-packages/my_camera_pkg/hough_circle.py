@@ -35,12 +35,12 @@ class HoughHoleDetector(Node):
             circles = cv2.HoughCircles(
                 gray,
                 cv2.HOUGH_GRADIENT,
-                dp=1.2,              # 影像解析度縮放比例
+                dp=0.12,              # 影像解析度縮放比例
                 minDist=20,          # 圓與圓間最小距離
                 param1=100,          # Canny 高閾值
-                param2=15,           # 圓形累加門檻（越小越鬆）
-                minRadius=3,
-                maxRadius=20
+                param2=22,           # 圓形累加門檻（越小越鬆）
+                minRadius=8,
+                maxRadius=15
             )
 
             hole_count = 0

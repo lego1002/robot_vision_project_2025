@@ -28,6 +28,7 @@ setup(
             'object_detect = my_camera_pkg.object_detect:main',
             'hough_circle = my_camera_pkg.hough_circle:main',
             'hough_circle_tuner = my_camera_pkg.hough_circle_tuner:main',
+            'yolo = my_camera_pkg.yolo:main',
         ],
     },
 )

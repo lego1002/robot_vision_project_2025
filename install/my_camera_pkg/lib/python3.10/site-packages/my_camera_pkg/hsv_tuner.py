@@ -24,7 +24,7 @@ cv2.createTrackbar("Min V", "HSV Filter", 0, 255, nothing)
 cv2.createTrackbar("Max V", "HSV Filter", 255, 255, nothing)
 
 # 嘗試開啟攝影機
-cap = cv2.VideoCapture('/dev/video3')
+cap = cv2.VideoCapture('/dev/video0')
 if not cap.isOpened():
     print("❌ 無法開啟攝影機")
     exit()

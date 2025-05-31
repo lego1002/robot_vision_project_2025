@@ -7,4 +7,5 @@ hough_circle_tuner = my_camera_pkg.hough_circle_tuner:main
 hsv = my_camera_pkg.hsv:main
 hsv_tuner = my_camera_pkg.hsv_tuner:main
 object_detect = my_camera_pkg.object_detect:main
+yolo = my_camera_pkg.yolo:main
 

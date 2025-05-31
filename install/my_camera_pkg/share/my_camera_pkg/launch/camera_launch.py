@@ -13,17 +13,25 @@ def generate_launch_description():
         
         # Node(
         #     package='my_camera_pkg',
-        #     executable='hsv',
-        #     name='hsv',
+        #     executable='hsv_tuner',
+        #     name='hsv_tuner',
         #     output='screen'
         # ),
-
+        
         Node(
             package='my_camera_pkg',
-            executable='canny_edges',
-            name='canny_edges',
+            executable='hsv',
+            name='hsv',
             output='screen'
         ),
+        
+        # --------------------------------
+        # Node(
+        #     package='my_camera_pkg',
+        #     executable='canny_edges',
+        #     name='canny_edges',
+        #     output='screen'
+        # ),
         
         # Node(
         #     package='my_camera_pkg',
@@ -32,6 +40,7 @@ def generate_launch_description():
         #     output='screen'
         # ),
         
+        # --------------------------------
         # Node(
         #     package='my_camera_pkg',
         #     executable='hough_circle',
@@ -39,12 +48,19 @@ def generate_launch_description():
         #     output='screen'
         # ),
         
-        Node(
-            package='my_camera_pkg',
-            executable='hough_circle_tuner',
-            name='hough_circle_tuner',
-            output='screen'
-        ),
+        # Node(
+        #     package='my_camera_pkg',
+        #     executable='hough_circle_tuner',
+        #     name='hough_circle_tuner',
+        #     output='screen'
+        # ),
+        
+        # Node(
+        #     package='my_camera_pkg',
+        #     executable='yolo',
+        #     name='yolo',
+        #     output='screen'
+        # ),
         
         # 啟動 rqt_image_view
         # Node(

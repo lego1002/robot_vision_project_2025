@@ -12,7 +12,7 @@ class CameraNode(Node):
         self.bridge = CvBridge()
 
         # 嘗試開啟 /dev/video5 攝影機
-        self.cap = cv2.VideoCapture('/dev/video4')
+        self.cap = cv2.VideoCapture('/dev/video0')
         if not self.cap.isOpened():
             self.get_logger().error("無法開啟攝影機！")
             return

@@ -1,0 +1,5 @@
+  File "/home/jacky/Documents/robot_vision_project_2025/install/my_camera_pkg/lib/python3.10/site-packages/my_camera_pkg/canny_edges.py", line 55
+    edge_msg = self.bridge.cv2_to_imgmsg(morphological encoding='mono8')
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+

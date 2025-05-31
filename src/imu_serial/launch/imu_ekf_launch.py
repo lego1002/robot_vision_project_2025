@@ -19,7 +19,7 @@ def generate_launch_description():
     return LaunchDescription([
         # 靜態 TF: imu_link → base_link（讓 EKF 能正常運作）
         Node(
-            package='tf2_ros',
+            package='tf2_ros', 
             executable='static_transform_publisher',
             name='imu_tf_pub',
             arguments=['0', '0', '0.5', '0', '0', '0', 'base_link', 'imu_link']

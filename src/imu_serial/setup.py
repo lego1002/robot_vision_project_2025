@@ -33,6 +33,7 @@ setup(
         'console_scripts': [
             'imu_data = imu_serial.imu_data:main',
             'imu_based_odom = imu_serial.imu_based_odom:main',
+            'imu_data_j1010 = imu_serial.imu_data_j1010:main',
         ],
     },
 )

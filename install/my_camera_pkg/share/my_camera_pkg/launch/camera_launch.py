@@ -26,12 +26,12 @@ def generate_launch_description():
         ),
         
         # --------------------------------
-        # Node(
-        #     package='my_camera_pkg',
-        #     executable='canny_edges',
-        #     name='canny_edges',
-        #     output='screen'
-        # ),
+        Node(
+            package='my_camera_pkg',
+            executable='canny_edges',
+            name='canny_edges',
+            output='screen'
+        ),
         
         # Node(
         #     package='my_camera_pkg',
@@ -41,12 +41,12 @@ def generate_launch_description():
         # ),
         
         # --------------------------------
-        # Node(
-        #     package='my_camera_pkg',
-        #     executable='hough_circle',
-        #     name='hough_circle',
-        #     output='screen'
-        # ),
+        Node(
+            package='my_camera_pkg',
+            executable='hough_circle',
+            name='hough_circle',
+            output='screen'
+        ),
         
         # Node(
         #     package='my_camera_pkg',
@@ -55,12 +55,26 @@ def generate_launch_description():
         #     output='screen'
         # ),
         
-        # Node(
-        #     package='my_camera_pkg',
-        #     executable='yolo',
-        #     name='yolo',
-        #     output='screen'
-        # ),
+        Node(
+            package='my_camera_pkg',
+            executable='yolo',
+            name='yolo',
+            output='screen'
+        ),
+        
+        Node(
+            package='my_camera_pkg',
+            executable='tkinter',
+            name='tkinter',
+            output='screen'
+        ),
+        
+        Node(
+            package='my_camera_pkg',
+            executable='hole_template_match',
+            name='hole_template_match',
+            output='screen'
+        ),
         
         # 啟動 rqt_image_view
         # Node(

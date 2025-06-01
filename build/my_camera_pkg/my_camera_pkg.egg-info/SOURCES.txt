@@ -13,11 +13,13 @@ my_camera_pkg/__init__.py
 my_camera_pkg/camera_node.py
 my_camera_pkg/camera_subscriber.py
 my_camera_pkg/canny_edges.py
+my_camera_pkg/hole_template_match.py
 my_camera_pkg/hough_circle.py
 my_camera_pkg/hough_circle_tuner.py
 my_camera_pkg/hsv.py
 my_camera_pkg/hsv_tuner.py
 my_camera_pkg/object_detect.py
+my_camera_pkg/tkinter.py
 my_camera_pkg/yolo.py
 resource/my_camera_pkg
 test/test_copyright.py

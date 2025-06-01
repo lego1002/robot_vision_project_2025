@@ -63,12 +63,16 @@ class ImuBasedOdomNode(Node):
         odom.header.frame_id = 'odom'
         odom.child_frame_id = 'base_link'
 
-        odom.pose.pose.position.x = self.position[0]
-        odom.pose.pose.position.y = self.position[1]
+        # odom.pose.pose.position.x = self.position[0]
+        # odom.pose.pose.position.y = self.position[1]
+        odom.pose.pose.position.x = 0
+        odom.pose.pose.position.y = 0
         odom.pose.pose.position.z = 0.0
 
-        odom.twist.twist.linear.x = self.velocity[0]
-        odom.twist.twist.linear.y = self.velocity[1]
+        # odom.twist.twist.linear.x = self.velocity[0]
+        # odom.twist.twist.linear.y = self.velocity[1]
+        odom.twist.twist.linear.x = 0
+        odom.twist.twist.linear.y = 0
         odom.twist.twist.linear.z = 0.0
 
         self.publisher.publish(odom)

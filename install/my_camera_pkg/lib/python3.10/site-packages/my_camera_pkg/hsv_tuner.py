@@ -9,7 +9,7 @@ CONFIG_PATH = os.path.join(
     "hsv_config.json"
 )
 
-print(os.path.dirname(os.path.abspath(__file__)))
+#print(os.path.dirname(os.path.abspath(__file__)))
 
 def nothing(x):
     pass

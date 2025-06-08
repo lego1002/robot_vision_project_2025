@@ -13,6 +13,7 @@ imu_serial/__init__.py
 imu_serial/imu_based_odom.py
 imu_serial/imu_data.py
 imu_serial/imu_data_j1010.py
+imu_serial/walk.py
 launch/imu_ekf_launch.py
 resource/imu_serial
 rviz/imu_ekf.rviz

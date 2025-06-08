@@ -18,7 +18,7 @@ class HoughCircleTuner(Node):
         # 訂閱原始相機影像
         self.subscription = self.create_subscription(
             Image,
-            '/camera/image_raw',
+            '/camera/image_rect',
             self.callback,
             10)
 
@@ -27,6 +27,9 @@ class HoughCircleTuner(Node):
         self.get_logger().info('🔧 Hough Circle Tuner 已啟動！按 s 儲存設定')
 
     def create_trackbars(self):
+        cv2.namedWindow("Hough Circle Tuner", cv2.WINDOW_NORMAL)
+        cv2.resizeWindow("Hough Circle Tuner", 1960, 1080)
+        
         cv2.namedWindow("Hough Circle Tuner")
         cv2.createTrackbar("dp x100", "Hough Circle Tuner", 12, 100, lambda x: None)   # 1.2
         cv2.createTrackbar("minDist", "Hough Circle Tuner", 20, 200, lambda x: None)
@@ -46,7 +49,7 @@ class HoughCircleTuner(Node):
             sharp = cv2.addWeighted(denoised, 1.5, blurred, -1, 20)
             edges = cv2.Canny(sharp, 70, 150)
             kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
-            thick_edges = cv2.dilate(edges, kernel, iterations=1)
+            thick_edges = cv2.dilate(edges, kernel, iterations=2)
 
             # 建立彩色顯示圖
             output = cv2.cvtColor(thick_edges, cv2.COLOR_GRAY2BGR)

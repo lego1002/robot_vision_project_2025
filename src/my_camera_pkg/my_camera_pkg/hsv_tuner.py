@@ -1,73 +1,86 @@
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
 import cv2
 import numpy as np
 import json
 import os
 
-# 儲存檔案路徑
 CONFIG_PATH = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
     "hsv_config.json"
 )
 
-#print(os.path.dirname(os.path.abspath(__file__)))
-
 def nothing(x):
     pass
 
-# 建立滑桿介面
-cv2.namedWindow("HSV Filter")
-cv2.createTrackbar("Min H", "HSV Filter", 0, 179, nothing)
-cv2.createTrackbar("Max H", "HSV Filter", 179, 179, nothing)
-cv2.createTrackbar("Min S", "HSV Filter", 0, 255, nothing)
-cv2.createTrackbar("Max S", "HSV Filter", 255, 255, nothing)
-cv2.createTrackbar("Min V", "HSV Filter", 0, 255, nothing)
-cv2.createTrackbar("Max V", "HSV Filter", 255, 255, nothing)
+# 建立視窗與滑桿
+cv2.namedWindow("HSV Tuner", cv2.WINDOW_NORMAL)
+cv2.resizeWindow("HSV Tuner", 1440, 960)
 
-# 嘗試開啟攝影機
-cap = cv2.VideoCapture('/dev/video0')
-if not cap.isOpened():
-    print("❌ 無法開啟攝影機")
-    exit()
+cv2.createTrackbar("Min H", "HSV Tuner", 0, 179, nothing)
+cv2.createTrackbar("Max H", "HSV Tuner", 179, 179, nothing)
+cv2.createTrackbar("Min S", "HSV Tuner", 0, 255, nothing)
+cv2.createTrackbar("Max S", "HSV Tuner", 255, 255, nothing)
+cv2.createTrackbar("Min V", "HSV Tuner", 0, 255, nothing)
+cv2.createTrackbar("Max V", "HSV Tuner", 255, 255, nothing)
 
-print("✅ 按 's' 鍵儲存參數，按 'q' 離開")
+class HSVTunerNode(Node):
+    def __init__(self):
+        super().__init__('hsv_tuner_node')
+        self.bridge = CvBridge()
+        self.subscription = self.create_subscription(
+            Image,
+            '/camera/image_rect',
+            self.image_callback,
+            10
+        )
+        self.get_logger().info("🎨 HSV Tuner ROS node started. 按 's' 儲存設定，'q' 離開。")
 
-while True:
-    ret, frame = cap.read()
-    if not ret:
-        break
+    def image_callback(self, msg):
+        try:
+            frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+            hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    # BGR → HSV
-    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+            minH = cv2.getTrackbarPos("Min H", "HSV Tuner")
+            maxH = cv2.getTrackbarPos("Max H", "HSV Tuner")
+            minS = cv2.getTrackbarPos("Min S", "HSV Tuner")
+            maxS = cv2.getTrackbarPos("Max S", "HSV Tuner")
+            minV = cv2.getTrackbarPos("Min V", "HSV Tuner")
+            maxV = cv2.getTrackbarPos("Max V", "HSV Tuner")
 
-    # 取得滑桿值
-    minH = cv2.getTrackbarPos("Min H", "HSV Filter")
-    maxH = cv2.getTrackbarPos("Max H", "HSV Filter")
-    minS = cv2.getTrackbarPos("Min S", "HSV Filter")
-    maxS = cv2.getTrackbarPos("Max S", "HSV Filter")
-    minV = cv2.getTrackbarPos("Min V", "HSV Filter")
-    maxV = cv2.getTrackbarPos("Max V", "HSV Filter")
+            lower = np.array([minH, minS, minV])
+            upper = np.array([maxH, maxS, maxV])
+            mask = cv2.inRange(hsv, lower, upper)
+            result = cv2.bitwise_and(frame, frame, mask=mask)
 
-    # 篩選影像
-    lower = np.array([minH, minS, minV])
-    upper = np.array([maxH, maxS, maxV])
-    mask = cv2.inRange(hsv, lower, upper)
-    result = cv2.bitwise_and(frame, frame, mask=mask)
+            cv2.imshow("HSV Tuner", result)
 
-    # 顯示
-    cv2.imshow("Filtered", result)
+            key = cv2.waitKey(1) & 0xFF
+            if key == ord('s'):
+                params = {
+                    "minH": minH, "maxH": maxH,
+                    "minS": minS, "maxS": maxS,
+                    "minV": minV, "maxV": maxV
+                }
+                with open(CONFIG_PATH, "w") as f:
+                    json.dump(params, f, indent=4)
+                self.get_logger().info(f"✅ 已儲存 HSV 參數到 {CONFIG_PATH}")
 
-    key = cv2.waitKey(1) & 0xFF
-    if key == ord('q'):
-        break
-    elif key == ord('s'):
-        params = {
-            "minH": minH, "maxH": maxH,
-            "minS": minS, "maxS": maxS,
-            "minV": minV, "maxV": maxV
-        }
-        with open(CONFIG_PATH, "w") as f:
-            json.dump(params, f, indent=4)
-        print(f"✅ 已儲存 HSV 參數到 {CONFIG_PATH}")
+            elif key == ord('q'):
+                self.get_logger().info("🛑 手動結束 HSV Tuner")
+                rclpy.shutdown()
 
-cap.release()
-cv2.destroyAllWindows()
+        except Exception as e:
+            self.get_logger().error(f"❌ 圖像處理錯誤: {e}")
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = HSVTunerNode()
+    rclpy.spin(node)
+    node.destroy_node()
+    cv2.destroyAllWindows()
+
+if __name__ == '__main__':
+    main()

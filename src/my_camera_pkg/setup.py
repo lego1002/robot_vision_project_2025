@@ -31,6 +31,7 @@ setup(
             'yolo = my_camera_pkg.yolo:main',
             'tkinter = my_camera_pkg.tkinter:main',
             'hole_template_match = my_camera_pkg.hole_template_match:main',
+            'undistort = my_camera_pkg.undistort:main'
         ],
     },
 )

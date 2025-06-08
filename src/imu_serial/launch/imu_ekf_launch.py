@@ -17,7 +17,7 @@ def generate_launch_description():
     )
     
     return LaunchDescription([
-        # 靜態 TF: imu_link → base_link（讓 EKF 能正常運作）
+        # TF: imu_link → base_link
         Node(
             package='tf2_ros', 
             executable='static_transform_publisher',
@@ -25,7 +25,7 @@ def generate_launch_description():
             arguments=['0', '0', '0.5', '0', '0', '0', 'base_link', 'imu_link']
         ),
         
-        # 啟動node: IMU加速度讀取
+        # IMU加速度讀取
         Node(
             package='imu_serial',
             executable='imu_data',
@@ -33,15 +33,22 @@ def generate_launch_description():
             output='screen'
         ),
         
-        # 啟動node: IMU速度位置估算
+        # IMU速度位置估算
+        # Node(
+        #     package='imu_serial',
+        #     executable='imu_based_odom',
+        #     name='imu_based_odom',
+        #     output='screen',
+        # ),
+        
         Node(
             package='imu_serial',
-            executable='imu_based_odom',
-            name='imu_based_odom',
+            executable='walk',
+            name='walk',
             output='screen',
         ),
 
-        # 啟動node: 內建EKF 
+        # EKF 
         Node(
             package='robot_localization',
             executable='ekf_node',
@@ -50,7 +57,7 @@ def generate_launch_description():
             parameters=[config_path]
         ),
         
-        # 啟動 RViz2
+        # RViz2
         Node(
             package='rviz2',
             executable='rviz2',

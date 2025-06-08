@@ -13,6 +13,9 @@ class CameraNode(Node):
 
         # 攝影機
         self.cap = cv2.VideoCapture('/dev/video0')
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
+        
         if not self.cap.isOpened():
             self.get_logger().error("無法開啟攝影機！")
             return

@@ -20,7 +20,7 @@ class YOLOPartClassifier(Node):
 
         self.subscription = self.create_subscription(
             Image,
-            '/camera/image_raw',
+            '/camera/image_rect',
             self.callback,
             10)
 
@@ -29,6 +29,7 @@ class YOLOPartClassifier(Node):
         self.good_pub = self.create_publisher(Image, '/yolo/good_parts', 10)
         self.bad_pub = self.create_publisher(Image, '/yolo/bad_parts', 10)
         
+        # 用與hsv做結合 偵測非此區物件
         self.center_pub = self.create_publisher(String, '/yolo/part_centers', 10)
 
         self.get_logger().info('🚀 YOLOPartClassifier 啟動，等待零件圖像...')
@@ -41,6 +42,7 @@ class YOLOPartClassifier(Node):
             img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
             results = self.model(img_rgb, verbose=False)[0]
+            #results = self.model.predict(img_rgb, imgsz=640, verbose=False)[0]
 
             if results.boxes is None or len(results.boxes) == 0:
                 self.get_logger().info(f"❌ [{part_id}] 無偵測結果")
@@ -66,7 +68,7 @@ class YOLOPartClassifier(Node):
                 label = self.model.names[cls_id]
                 x1, y1, x2, y2 = map(int, box.xyxy[0])
 
-                status = "good" if conf >= 0.9 else "bad"
+                status = "good" if conf >= 0.8 else "bad"
 
                 pad = 20
                 x1_pad = max(x1 - pad, 0)
@@ -76,29 +78,29 @@ class YOLOPartClassifier(Node):
 
                 part_crop = original_img[y1_pad:y2_pad, x1_pad:x2_pad]
 
-                # ✅ 建立 ROS 訊息
+                # 建立 ROS 訊息
                 crop_msg = self.bridge.cv2_to_imgmsg(part_crop, encoding='bgr8')
                 crop_msg.header = msg.header
                 crop_msg.header.frame_id = f"part_{part_id}_{i}:{status}"
 
                 if status == "good":
                     self.good_pub.publish(crop_msg)
-                    # ✅ 只有 good 才計算中心點
+                    # 只有 good 才計算中心點
                     cx = int((x1 + x2) // 2)
                     cy = int((y1 + y2) // 2)
                     center_list.append((cx, cy))
                 else:
                     self.bad_pub.publish(crop_msg)
                     
-                # ✅ 標註圖像（但不發布這個版本）
-                crop_disp = cv2.resize(part_crop, (500, 150))
+                # 標註圖像（不發布這個版本）
+                crop_disp = cv2.resize(part_crop, (600, 150))
                 label_text = f"{i} - {status}"
                 cv2.putText(crop_disp, label_text, (5, 20),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.6,
                             (0, 255, 0) if status == "good" else (0, 0, 255), 2)
                 cropped_images.append(crop_disp)
 
-                # ✅ 原圖畫框
+                # 原圖畫框
                 text = f"{label}: {conf:.2f} {status}"
                 cv2.rectangle(img, (x1_pad, y1_pad), (x2_pad, y2_pad), (0, 255, 0), 2)
                 cv2.putText(img, text, (x1_pad, y1_pad - 10),
@@ -113,13 +115,16 @@ class YOLOPartClassifier(Node):
             center_msg.data = str(center_list)
             self.center_pub.publish(center_msg)
 
-            # ✅ 合併所有縮圖橫向排列（或可改為格子排）
+            # 合併所有縮圖橫向排列（或可改為格子排）
             if cropped_images:
                 combined_view = np.vstack(cropped_images)
                 cv2.imshow("YOLO Crops Combined", combined_view)
 
-            # ✅ 原圖顯示
-            cv2.imshow(f"YOLO - {part_id}", img)
+            # yolo圖框圖像顯示
+            display_width = 1080
+            scale = display_width / img.shape[1]
+            resized_img = cv2.resize(img, (display_width, int(img.shape[0] * scale)))
+            cv2.imshow(f"YOLO - {part_id}", resized_img)
             cv2.waitKey(1)
 
         except Exception as e:

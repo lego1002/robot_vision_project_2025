@@ -27,7 +27,7 @@ class HSVFilterNode(Node):
             self.upper = np.array([179, 255, 255])
 
         # === Subscribers & Publishers ===
-        self.subscription = self.create_subscription(Image, '/camera/image_raw', self.callback, 10)
+        self.subscription = self.create_subscription(Image, '/camera/image_rect', self.callback, 10)
         self.yolo_count_sub = self.create_subscription(Int32, '/yolo/part_count', self.yolo_count_callback, 10)
         self.yolo_center_sub = self.create_subscription(String, '/yolo/part_centers', self.yolo_center_callback, 10)
         self.analysis_pub = self.create_publisher(String, '/analysis/part_difference', 10)
@@ -60,13 +60,14 @@ class HSVFilterNode(Node):
             # combined = np.hstack((frame, mask_bgr, result_img))
             # combined_resized = cv2.resize(combined, (900, 300))
 
-            cv2.imshow("HSV Filtering", result_img)
+            resized = cv2.resize(result_img, (960, 540))
+            cv2.imshow("HSV Filtering", resized)
             cv2.waitKey(1)
 
             hsv_boxes = []
             for cnt in contours:
                 area = cv2.contourArea(cnt)
-                if area >= 2000:
+                if area >= 3000:
                     x, y, w, h = cv2.boundingRect(cnt)
                     hsv_boxes.append((x, y, w, h))
 

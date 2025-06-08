@@ -11,6 +11,13 @@ def generate_launch_description():
             output='screen'
         ),
         
+        Node(
+            package='my_camera_pkg',
+            executable='undistort',
+            name='undistort',
+            output='screen'
+        ),
+        
         # Node(
         #     package='my_camera_pkg',
         #     executable='hsv_tuner',

@@ -1,0 +1,24 @@
+[0.625s] Invoking command in '/home/jacky/Documents/robot_vision_project_2025/src/imu_serial': PYTHONPATH=/home/jacky/Documents/robot_vision_project_2025/build/imu_serial/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/imu_serial build --build-base /home/jacky/Documents/robot_vision_project_2025/build/imu_serial/build install --record /home/jacky/Documents/robot_vision_project_2025/build/imu_serial/install.log --single-version-externally-managed install_data
+[0.854s] running egg_info
+[0.855s] writing ../../build/imu_serial/imu_serial.egg-info/PKG-INFO
+[0.855s] writing dependency_links to ../../build/imu_serial/imu_serial.egg-info/dependency_links.txt
+[0.855s] writing entry points to ../../build/imu_serial/imu_serial.egg-info/entry_points.txt
+[0.855s] writing requirements to ../../build/imu_serial/imu_serial.egg-info/requires.txt
+[0.856s] writing top-level names to ../../build/imu_serial/imu_serial.egg-info/top_level.txt
+[0.857s] reading manifest file '../../build/imu_serial/imu_serial.egg-info/SOURCES.txt'
+[0.858s] writing manifest file '../../build/imu_serial/imu_serial.egg-info/SOURCES.txt'
+[0.859s] running build
+[0.859s] running build_py
+[0.859s] running install
+[0.859s] running install_lib
+[0.860s] running install_data
+[0.861s] running install_egg_info
+[0.863s] removing '/home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial-0.0.0-py3.10.egg-info' (and everything under it)
+[0.863s] Copying ../../build/imu_serial/imu_serial.egg-info to /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial-0.0.0-py3.10.egg-info
+[0.863s] running install_scripts
+[0.883s] Installing imu_based_odom script to /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/imu_serial
+[0.883s] Installing imu_data script to /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/imu_serial
+[0.883s] Installing imu_data_j1010 script to /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/imu_serial
+[0.883s] Installing walk script to /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/imu_serial
+[0.883s] writing list of installed files to '/home/jacky/Documents/robot_vision_project_2025/build/imu_serial/install.log'
+[0.901s] Invoked command in '/home/jacky/Documents/robot_vision_project_2025/src/imu_serial' returned '0': PYTHONPATH=/home/jacky/Documents/robot_vision_project_2025/build/imu_serial/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/imu_serial build --build-base /home/jacky/Documents/robot_vision_project_2025/build/imu_serial/build install --record /home/jacky/Documents/robot_vision_project_2025/build/imu_serial/install.log --single-version-externally-managed install_data

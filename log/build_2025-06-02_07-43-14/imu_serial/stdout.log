@@ -1,0 +1,27 @@
+running egg_info
+writing ../../build/imu_serial/imu_serial.egg-info/PKG-INFO
+writing dependency_links to ../../build/imu_serial/imu_serial.egg-info/dependency_links.txt
+writing entry points to ../../build/imu_serial/imu_serial.egg-info/entry_points.txt
+writing requirements to ../../build/imu_serial/imu_serial.egg-info/requires.txt
+writing top-level names to ../../build/imu_serial/imu_serial.egg-info/top_level.txt
+reading manifest file '../../build/imu_serial/imu_serial.egg-info/SOURCES.txt'
+writing manifest file '../../build/imu_serial/imu_serial.egg-info/SOURCES.txt'
+running build
+running build_py
+copying imu_serial/walk.py -> /home/jacky/Documents/robot_vision_project_2025/build/imu_serial/build/lib/imu_serial
+running install
+running install_lib
+copying /home/jacky/Documents/robot_vision_project_2025/build/imu_serial/build/lib/imu_serial/walk.py -> /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial
+byte-compiling /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial/walk.py to walk.cpython-310.pyc
+running install_data
+copying launch/imu_ekf_launch.py -> /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/share/imu_serial/launch
+copying config/imu_ekf.yaml -> /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/share/imu_serial/config
+running install_egg_info
+removing '/home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/imu_serial/imu_serial.egg-info to /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial-0.0.0-py3.10.egg-info
+running install_scripts
+Installing imu_based_odom script to /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/imu_serial
+Installing imu_data script to /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/imu_serial
+Installing imu_data_j1010 script to /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/imu_serial
+Installing walk script to /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/imu_serial
+writing list of installed files to '/home/jacky/Documents/robot_vision_project_2025/build/imu_serial/install.log'

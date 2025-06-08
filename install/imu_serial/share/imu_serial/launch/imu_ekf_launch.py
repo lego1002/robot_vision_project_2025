@@ -34,10 +34,17 @@ def generate_launch_description():
         ),
         
         # 啟動node: IMU速度位置估算
+        # Node(
+        #     package='imu_serial',
+        #     executable='imu_based_odom',
+        #     name='imu_based_odom',
+        #     output='screen',
+        # ),
+        
         Node(
             package='imu_serial',
-            executable='imu_based_odom',
-            name='imu_based_odom',
+            executable='walk',
+            name='walk',
             output='screen',
         ),
 

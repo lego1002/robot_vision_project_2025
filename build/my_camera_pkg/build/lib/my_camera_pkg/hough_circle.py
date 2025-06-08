@@ -116,7 +116,7 @@ def main(args=None):
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
-        node.get_logger().info("🛑 手動關閉 HoughHoleDetector")
+        node.get_logger().info("手動關閉 HoughHoleDetector")
     finally:
         node.destroy_node()
         cv2.destroyAllWindows()

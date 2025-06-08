@@ -42,7 +42,7 @@ class ImageProcessor(Node):
             sharp = cv2.addWeighted(denoised, 1.5, blurred, -1, 20)
             edges = cv2.Canny(sharp, 70, 150)
             kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
-            thick_edges = cv2.dilate(edges, kernel, iterations=1)
+            thick_edges = cv2.dilate(edges, kernel, iterations=2)
 
             # 顯示流程：gray → denoised → sharp → edges → thick_edges
             gray_bgr = cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)

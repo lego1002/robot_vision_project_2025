@@ -1,8 +1,10 @@
 /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial/imu_data.py
+/home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial/walk.py
 /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial/imu_based_odom.py
 /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial/imu_data_j1010.py
 /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial/__init__.py
 /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial/__pycache__/imu_data.cpython-310.pyc
+/home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial/__pycache__/walk.cpython-310.pyc
 /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial/__pycache__/imu_based_odom.cpython-310.pyc
 /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial/__pycache__/imu_data_j1010.cpython-310.pyc
 /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/python3.10/site-packages/imu_serial/__pycache__/__init__.cpython-310.pyc
@@ -21,3 +23,4 @@
 /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/imu_serial/imu_based_odom
 /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/imu_serial/imu_data
 /home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/imu_serial/imu_data_j1010
+/home/jacky/Documents/robot_vision_project_2025/install/imu_serial/lib/imu_serial/walk

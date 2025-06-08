@@ -20,6 +20,7 @@ my_camera_pkg/hsv.py
 my_camera_pkg/hsv_tuner.py
 my_camera_pkg/object_detect.py
 my_camera_pkg/tkinter.py
+my_camera_pkg/undistort.py
 my_camera_pkg/yolo.py
 resource/my_camera_pkg
 test/test_copyright.py
